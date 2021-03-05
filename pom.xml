@@ -11,6 +11,8 @@
   <modules>
     <module>cloud-provider-payment8001</module>
       <module>cloud-consumer-order80</module>
+      <module>cloud-zk-provider-payment8004</module>
+    <module>cloud-zk-consumer-order80</module>
   </modules>
 
   <name>Maven</name>
