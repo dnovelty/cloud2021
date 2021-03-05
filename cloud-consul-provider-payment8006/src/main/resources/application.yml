@@ -1,0 +1,16 @@
+#8004表示注册到zookeeper服务器的支付服务提供者端口号
+server:
+  port: 8006
+spring:
+  application:
+    name: cloud-provider-payment
+
+  ####consul注册中心地址
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}
+
