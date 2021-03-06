@@ -1,0 +1,35 @@
+调用服务组件
+
+
+<!--openfeign-->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-openfeign</artifactId>
+</dependency>
+
+启动入口应用@EnableFeignClients
+
+编写FeignClient接口
+@Service
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE")
+public interface FeignPaymentService {
+
+    @GetMapping(value = "/payment/get/{id}")
+    CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+}
+
+编写日志级别
+@Configuration
+public class FeignConfig {
+
+    @Bean
+    Logger.Level getLogLevel(){
+        return Logger.Level.FULL;
+    }
+}
+
+编写配置文件
+
+logging:
+  level:
+    com.atguigu.springcloud.service.FeignPaymentService: debug

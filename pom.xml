@@ -19,6 +19,7 @@
     <module>cloud-provider-payment8002</module>
     <module>cloud-consul-provider-payment8006</module>
     <module>cloud-consul-consumer-order80</module>
+      <module>cloud-consumer-feign-order80</module>
   </modules>
 
   <name>Maven</name>
