@@ -1,0 +1,5 @@
+消费端负载均衡调度
+
+返回IRule的实例方法不应该在@ComponentScan注解扫描范围内
+在程序入口处@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = SpecLoadbalanceRule.class)指定IRule的实例配置类
+RibbonClient中的name属性必须指定正确，否则没有查到服务不会加载rule

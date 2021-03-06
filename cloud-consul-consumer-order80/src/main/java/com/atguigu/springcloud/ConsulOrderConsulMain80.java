@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-public class OrderZKMain80 {
+@EnableDiscoveryClient //该注解用于向使用consul或者zookeeper作为注册中心时注册服务
+public class ConsulOrderConsulMain80 {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderZKMain80.class, args);
+        SpringApplication.run(ConsulOrderConsulMain80.class, args);
     }
 }
