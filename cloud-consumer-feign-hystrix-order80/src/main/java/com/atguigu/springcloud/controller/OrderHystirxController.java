@@ -37,6 +37,14 @@ public class OrderHystirxController {
     })
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id)
     {
+        boolean interrupted = false;
+        if(true){
+            int i = 0;
+            for(;!interrupted;){
+                log.info("线程中断了吗？{}",interrupted = Thread.interrupted());
+            }
+        }
+
         String result = paymentHystrixService.paymentInfo_TimeOut(id);
         return result;
     }
