@@ -1,12 +1,36 @@
-package com.atguigu.springcloud;
+# hystrix监控
 
-import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Bean;
+## 引入依赖
+
+```xml
+      <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+```
+
+## 应用入口启动
+
+```java
+@SpringBootApplication
+@EnableHystrixDashboard
+public class HystrixDashboardMain9001 {
+
+    public static void main(String[] args) {
+        SpringApplication.run(HystrixDashboardMain9001.class, args);
+    }
+}
+
+```
+
+## 在被监控的服务加上配置bean
+
+```java
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -31,3 +55,8 @@ public class PaymentHystrixMain8001 {
         return registrationBean;
     }
 }
+```
+
+## 访问监控页http://localhost:9001/hystrix
+
+## 添加监控路径http://localhost:8001/hystrix.stream
