@@ -26,6 +26,9 @@
       <module>cloud-gateway-gateway9527</module>
     <module>cloud-config-center-3344</module>
     <module>cloud-config-client-3355</module>
+    <module>seata-order-service2001</module>
+    <module>seata-account-service2003</module>
+    <module>seata-storage-service2002</module>
   </modules>
 
   <name>Maven</name>

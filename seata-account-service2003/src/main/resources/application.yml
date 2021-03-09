@@ -1,0 +1,33 @@
+server:
+  port: 2003
+
+spring:
+  application:
+    name: seata-account-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_account
+    username: root
+    password: 123456
+
+feign:
+  hystrix:
+    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+
+eureka:
+  client:
+    register-with-eureka: true     #false表示不向注册中心注册自己。
+    fetch-registry: true     #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    service-url:
+      #集群指向其它eureka的域名地址，每台eureka需要知道其他eureka的服务地址。
+      defaultZone: http://eureka7001.com:7001/eureka/
+
