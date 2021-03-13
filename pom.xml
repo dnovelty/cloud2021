@@ -29,6 +29,10 @@
     <module>seata-at-order-service2001</module>
     <module>seata-at-account-service2003</module>
     <module>seata-at-storage-service2002</module>
+    <module>cloudalibaba-provider-reg-nacos-payment9001</module>
+    <module>cloudalibaba-provider-reg-nacos-payment9002</module>
+    <module>cloudalibaba-consumer-reg-nacos-order83</module>
+    <module>cloudalibaba-nacos-config-client3377</module>
   </modules>
 
   <name>Maven</name>
