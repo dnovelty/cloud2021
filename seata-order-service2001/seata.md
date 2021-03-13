@@ -2,6 +2,8 @@
 
 ## 初始化
 
+### 服务器版本和客户端版本要对应上
+
 ### 引入依赖
 如果使用的是mysql8数据库需要引入8以上的数据库链接驱动
 ```xml
@@ -105,6 +107,7 @@ spring:
 需要注意的是 service.vgroup_mapping这个配置，在 Spring Cloud 中默认是${spring.application.name}-fescar-service-group，
 可以通过指定application.properties的 spring.cloud.alibaba.seata.tx-service-group这个属性覆盖，但是必须要和 file.conf 中的一致，否则会提示 no available server to connect
 
+注意高版本（0.9.0以上）客户端应写成service.vgroupMapping
 file.conf
 ```
 transport {

@@ -18,21 +18,25 @@
 
     <dependencies>
 
+        <!--        eureka客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <!--seata-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <exclusions>
                 <exclusion>
-                    <artifactId>seata-all</artifactId>
                     <groupId>io.seata</groupId>
+                    <artifactId>seata-all</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-all</artifactId>
-            <version>0.9.0</version>
         </dependency>
         <!--feign-->
         <dependency>

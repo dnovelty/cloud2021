@@ -51,6 +51,7 @@ public class OrderServiceImpl implements OrderService
         //4 修改订单状态，从零到1,1代表已经完成
         log.info("----->修改订单状态开始");
         orderDao.update(order.getUserId(),0);
+        int i = 1 / 0;
         log.info("----->修改订单状态结束");
 
         log.info("----->下订单结束了，O(∩_∩)O哈哈~");
