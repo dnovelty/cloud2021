@@ -28,7 +28,7 @@
     <module>cloud-config-client-3355</module>
     <module>seata-at-order-service2001</module>
     <module>seata-at-account-service2003</module>
-    <module>seata-storage-service2002</module>
+    <module>seata-at-storage-service2002</module>
   </modules>
 
   <name>Maven</name>
